@@ -1,17 +1,17 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Choco Install'
+description: 'install packages on windows using choco'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  package-name:  # id of input
+    description: 'The package to install'
     required: true
-    default: 'World'
+    default: 'lua'
 outputs:
   time: # id of output
-    description: 'The time we greeted you'
+    description: 'The time it was installed'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.package-name }}
 

@@ -4,18 +4,18 @@ This action prints "Hello World" or "Hello" + the name of a person to greet to t
 
 ## Inputs
 
-### `who-to-greet`
+### `package-name`
 
-**Required** The name of the person to greet. Default `"World"`.
+**Required** The name of the package to install. Default `lua`.
 
 ## Outputs
 
 ### `time`
 
-The time we greeted you.
+The time the package was installed.
 
 ## Example usage
 
-uses: actions/hello-world-docker-action@v1
+uses: actions/windows-install@v1
 with:
-  who-to-greet: 'Mona the Octocat'
+  package-name: 'lua'
